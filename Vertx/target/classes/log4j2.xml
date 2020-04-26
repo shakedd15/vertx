@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress XmlUnboundNsPrefix -->
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" charset="utf-8"/>
+        </Console>
+
+
+        <RollingFile name="RollingREFile" fileName="logs/RE.log" filePattern="logs/repository/RuleEngine-log-%d{dd-MM-yyyy}-%i">
+            <PatternLayout>
+                <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="3 KB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG" includeLocation="false">
+            <AppenderRef ref="Console" level="info"/>
+            <AppenderRef ref="RollingREFile" level="info"/>
+        </Root>
+        <!--<Logger name="idf.iaf.ofek.kerenor.radio.rulesengine" level="debug" includeLocation="false">-->
+        <!--<AppenderRef ref="RollingREFile"/>-->
+        <!--</Logger>-->
+    </Loggers>
+</Configuration>

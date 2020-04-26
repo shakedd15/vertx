@@ -1,0 +1,8 @@
+19:56:16.430 [vert.x-eventloop-thread-1] INFO  rest.Handlers - Soldiers list returned.
+
+19:56:38.796 [vert.x-eventloop-thread-1] INFO  rest.Handlers - Soldier found.
+
+19:56:56.086 [vert.x-eventloop-thread-1] INFO  rest.Handlers - Soldier removed.
+
+19:56:56.087 [vert.x-eventloop-thread-1] INFO  rest.Handlers - Soldiers list returned.
+
